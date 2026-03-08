@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - الصفحة غير موجودة | مكتب المستشار الحسين دويدار</title>
+    <meta name="robots" content="noindex, follow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .error-page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 20px;
+            background: var(--black);
+            padding-top: 0;
+        }
+        .error-number {
+            font-size: clamp(6rem, 20vw, 12rem);
+            font-family: 'Aref Ruqaa', serif;
+            color: var(--gold);
+            line-height: 1;
+            text-shadow: 0 0 60px rgba(212, 175, 55, 0.2);
+            margin-bottom: 10px;
+        }
+        .error-icon {
+            font-size: 3rem;
+            color: var(--gold-dim);
+            margin-bottom: 20px;
+            opacity: 0.6;
+        }
+        .error-title {
+            font-size: clamp(1.5rem, 4vw, 2.2rem);
+            font-family: 'Aref Ruqaa', serif;
+            color: var(--white);
+            margin-bottom: 15px;
+        }
+        .error-message {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            max-width: 500px;
+            line-height: 1.9;
+            margin-bottom: 35px;
+        }
+        .error-home-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, var(--gold), var(--gold-dim));
+            color: var(--black);
+            font-family: 'Cairo', sans-serif;
+            font-weight: 700;
+            padding: 14px 40px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            border: none;
+        }
+        .error-home-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(212, 175, 55, 0.4);
+            color: var(--black);
+        }
+        .error-divider {
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            margin: 25px auto;
+            border-radius: 10px;
+        }
+        .error-navbar {
+            width: 100%;
+            padding: 18px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+            background: rgba(8, 8, 8, 0.95);
+            position: fixed;
+            top: 0;
+            z-index: 100;
+        }
+        .error-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+        .error-brand-icon {
+            font-size: 1.6rem;
+            color: var(--gold);
+        }
+        .error-brand-name {
+            font-size: 1.2rem;
+            color: var(--white);
+            font-family: 'Aref Ruqaa', serif;
+        }
+        .error-brand-name span {
+            color: var(--gold);
+        }
+        body { padding-top: 70px; }
+    </style>
+</head>
+<body>
+
+    <div class="error-navbar">
+        <a href="index.html" class="error-brand">
+            <i class="fa-solid fa-scale-balanced error-brand-icon" aria-hidden="true"></i>
+            <span class="error-brand-name">المستشار <span>الحسين دويدار</span></span>
+        </a>
+    </div>
+
+    <main class="error-page">
+        <div class="error-number">404</div>
+        <i class="fas fa-search error-icon" aria-hidden="true"></i>
+        <h1 class="error-title">عذراً! الصفحة غير موجودة</h1>
+        <div class="error-divider"></div>
+        <p class="error-message">
+            الصفحة التي تبحث عنها ربما تم نقلها أو حذفها أو أن الرابط غير صحيح.
+            يمكنك العودة إلى الصفحة الرئيسية والمتابعة من هناك.
+        </p>
+        <a href="index.html" class="error-home-btn">
+            <i class="fas fa-home" aria-hidden="true"></i>
+            العودة إلى الصفحة الرئيسية
+        </a>
+    </main>
+
+</body>
+</html>
