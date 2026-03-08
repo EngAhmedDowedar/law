@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>الموقع الرسمي | المستشار القانوني الحسين دويدار</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="الموقع الرسمي للمستشار القانوني الحسين دويدار - محامي بالنقض والإدارية العليا. خبرة استثنائية في القضايا المدنية والجنائية، تأسيس الشركات، وصياغة العقود.">
+    <meta name="keywords" content="الحسين دويدار, مستشار قانوني, محامي بالنقض, إدارية عليا, قضايا مدنية, قضايا جنائية, استشارات قانونية, تأسيس شركات, محامي في مصر">
+    <meta name="author" content="الحسين دويدار">
+    <meta property="og:title" content="المستشار القانوني الحسين دويدار - محامي بالنقض والإدارية العليا">
+    <meta property="og:description" content="نقدم حلولاً قانونية متكاملة بمهنية وسرية تامة. تواصل معنا لحجز استشارتك.">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#D4AF37">
+
+    <!-- Schema Markup for Local Business (Lawyer) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LegalService",
+      "name": "مكتب المستشار القانوني الحسين دويدار",
+      "image": "https://images.unsplash.com/photo-1505664177922-9818f15aa25b",
+      "@id": "",
+      "url": "https://www.dowedar-law.com",
+      "telephone": "+201000000000",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "شارع المحاكم الرئيسي",
+        "addressLocality": "القاهرة",
+        "addressRegion": "القاهرة",
+        "postalCode": "11511",
+        "addressCountry": "EG"
+      },
+      "priceRange": "$$",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"
+        ],
+        "opens": "09:00",
+        "closes": "17:00"
+      }
+    }
+    </script>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        /* ============================================
+           المتغيرات الأساسية
+        ============================================ */
+        :root {
+            --black: #080808;
+            --dark-gray: #121212;
+            --card-bg: #0f0f0f;
+            --gold: #D4AF37;
+            --gold-hover: #e8c547;
+            --gold-dim: #C5A059;
+            --gold-low: rgba(212, 175, 55, 0.15);
+            --gold-glow: rgba(212, 175, 55, 0.4);
+            --white: #ffffff;
+            --text-muted: #9a9a9a;
+            --section-padding: 100px 0;
+            --border-radius: 16px;
+            --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --navbar-height: 76px;
+        }
+
+        /* ============================================
+           Reset & Base
+        ============================================ */
+        *, *::before, *::after { box-sizing: border-box; }
+        html { overflow-x: hidden; cursor: none; } /* إخفاء الماوس الافتراضي لتشغيل الكاستم */
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--black);
+            color: var(--white);
+            direction: rtl;
+            overflow-x: hidden;
+            margin: 0; padding: 0;
+            padding-top: var(--navbar-height);
+            line-height: 1.8;
+        }
+
+        /* Custom Cursor */
+        .cursor-dot {
+            width: 8px; height: 8px; background: var(--gold);
+            border-radius: 50%; position: fixed; top: 0; left: 0;
+            pointer-events: none; z-index: 99999;
+            transform: translate(-50%, -50%);
+            transition: width 0.2s, height 0.2s, background-color 0.2s;
+        }
+        .cursor-outline {
+            width: 40px; height: 40px; border: 1px solid rgba(212, 175, 55, 0.5);
+            border-radius: 50%; position: fixed; top: 0; left: 0;
+            pointer-events: none; z-index: 99998;
+            transform: translate(-50%, -50%);
+            transition: width 0.2s, height 0.2s, background-color 0.2s;
+        }
+        .cursor-hover .cursor-dot { width: 12px; height: 12px; background: var(--white); mix-blend-mode: difference;}
+        .cursor-hover .cursor-outline { width: 60px; height: 60px; background: rgba(255,255,255,0.1); border-color: transparent;}
+
+        /* Scroll Progress Bar */
+        .scroll-progress {
+            position: fixed; top: 0; left: 0; width: 0%; height: 3px;
+            background: linear-gradient(to right, var(--gold-dim), var(--gold), #ffdf70);
+            z-index: 10000; transition: width 0.1s;
+            box-shadow: 0 0 10px var(--gold-glow);
+        }
+
+        section[id], header[id] { scroll-margin-top: var(--navbar-height); }
+
+        /* ============================================
+           Utility Classes
+        ============================================ */
+        .brand-ruqaa { font-family: 'Aref Ruqaa', serif !important; }
+        .gold-text { color: var(--gold) !important; }
+        .bg-darker { background: #0a0a0a; }
+        .section-padding { padding: var(--section-padding); }
+
+        .section-header { text-align: center; margin-bottom: 60px; }
+        .section-header h2 { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 15px; letter-spacing: -0.5px; }
+        .section-header p { color: var(--text-muted); font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
+        .section-header .header-line {
+            width: 80px; height: 3px; background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            margin: 20px auto 0; border-radius: 10px;
+        }
+
+        ::selection { background: var(--gold); color: var(--black); }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: var(--black); }
+        ::-webkit-scrollbar-thumb { background: var(--gold-dim); border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--gold); }
+
+        /* ============================================
+           Preloader
+        ============================================ */
+        #preloader {
+            position: fixed; inset: 0; background: var(--black);
+            display: flex; align-items: center; justify-content: center;
+            z-index: 999999; transition: opacity 0.6s ease, visibility 0.6s ease;
+        }
+        #preloader.hidden { opacity: 0; visibility: hidden; }
+        .loader-content { text-align: center; }
+        .loader-circle {
+            width: 100px; height: 100px; border: 2px solid rgba(212, 175, 55, 0.1);
+            border-top: 3px solid var(--gold); border-radius: 50%;
+            animation: spin 1s linear infinite; margin: 0 auto 20px; position: relative;
+        }
+        .loader-circle::after {
+            content: '\f24e'; font-family: 'Font Awesome 6 Free'; font-weight: 900;
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            color: var(--gold); font-size: 1.8rem;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        /* ============================================
+           Navbar
+        ============================================ */
+        .navbar {
+            position: fixed; top: 0; width: 100%; z-index: 9999;
+            background: rgba(8, 8, 8, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(197, 160, 89, 0.15);
+            padding: 12px 0; transition: var(--transition); height: var(--navbar-height);
+        }
+        .navbar.scrolled {
+            background: rgba(8, 8, 8, 0.98); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+            border-bottom-color: rgba(197, 160, 89, 0.3);
+        }
+        .navbar .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+        .navbar-brand { display: flex !important; align-items: center; text-decoration: none; gap: 10px; transition: var(--transition); }
+        .brand-icon { font-size: 1.8rem; color: var(--gold); filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.3)); }
+        .brand-name { font-size: 1.35rem; color: var(--white); }
+        .brand-name .gold-text { font-weight: 700; }
+
+        .navbar-toggler { border: none !important; padding: 8px; outline: none !important; box-shadow: none !important; }
+        .hamburger-icon { width: 26px; height: 20px; display: flex; flex-direction: column; justify-content: space-between; cursor: pointer; }
+        .hamburger-icon span {
+            display: block; height: 2.5px; width: 100%;
+            background: linear-gradient(90deg, var(--gold-dim), var(--gold-hover));
+            border-radius: 10px; transition: all 0.35s cubic-bezier(0.645, 0.045, 0.355, 1);
+        }
+        .navbar-toggler:not(.collapsed) .hamburger-icon span:nth-child(1) { transform: translateY(8.5px) rotate(45deg); }
+        .navbar-toggler:not(.collapsed) .hamburger-icon span:nth-child(2) { opacity: 0; transform: translateX(-15px); }
+        .navbar-toggler:not(.collapsed) .hamburger-icon span:nth-child(3) { transform: translateY(-8.5px) rotate(-45deg); }
+
+        .nav-link {
+            color: var(--text-muted) !important; font-weight: 600; font-size: 0.95rem;
+            padding: 10px 18px !important; position: relative; transition: var(--transition);
+        }
+        .nav-link::after {
+            content: ''; position: absolute; bottom: 5px; right: 18px; width: 0; height: 2px;
+            background: var(--gold); transition: width 0.3s ease; border-radius: 10px;
+        }
+        .nav-link:hover, .nav-link.active { color: var(--gold) !important; }
+        .nav-link:hover::after, .nav-link.active::after { width: calc(100% - 36px); }
+        .navbar-collapse { flex-basis: 100%; flex-grow: 0; }
+        .navbar-nav { width: 100%; justify-content: flex-end; }
+
+        /* ============================================
+           Hero Section
+        ============================================ */
+        .hero { min-height: calc(100vh - var(--navbar-height)); display: flex; align-items: center; position: relative; overflow: hidden; padding: 40px 0; }
+        .hero-bg-particles { position: absolute; inset: 0; overflow: hidden; z-index: 0; }
+        .particle {
+            position: absolute; width: 3px; height: 3px; background: var(--gold); border-radius: 50%;
+            opacity: 0; animation: floatParticle 8s infinite ease-in-out;
+        }
+        @keyframes floatParticle {
+            0% { opacity: 0; transform: translateY(100vh) scale(0); }
+            20% { opacity: 0.6; } 80% { opacity: 0.3; }
+            100% { opacity: 0; transform: translateY(-100px) scale(1.5); }
+        }
+        .hero::before {
+            content: ''; position: absolute; inset: 0;
+            background: radial-gradient(ellipse at 30% 50%, rgba(212, 175, 55, 0.05) 0%, transparent 70%); z-index: 0;
+        }
+        .hero .container { position: relative; z-index: 1; }
+
+        .hero-frame {
+            background: rgba(15, 15, 15, 0.6); border: 1px solid var(--gold-low);
+            border-radius: 24px; overflow: hidden; backdrop-filter: blur(12px);
+            transition: var(--transition); max-width: 1200px; margin: 0 auto;
+        }
+        .hero-frame:hover { border-color: rgba(212, 175, 55, 0.4); box-shadow: 0 0 60px rgba(212, 175, 55, 0.08); }
+
+        .official-tag {
+            display: inline-flex; align-items: center; gap: 8px; border: 1px solid rgba(212, 175, 55, 0.3);
+            padding: 6px 22px; border-radius: 50px; font-size: 0.85rem;
+            background: rgba(212, 175, 55, 0.05); color: var(--gold); font-weight: 600;
+        }
+        .hero-name {
+            font-size: clamp(2.5rem, 6vw, 4.2rem); font-weight: 700; margin: 25px 0;
+            background: linear-gradient(135deg, var(--white) 0%, var(--gold-dim) 50%, var(--white) 100%);
+            background-size: 200% auto; -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; background-clip: text;
+            animation: shimmer 4s ease-in-out infinite; letter-spacing: -1px;
+            line-height: 1.2;
+        }
+        @keyframes shimmer { 0%, 100% { background-position: 0% center; } 50% { background-position: 200% center; } }
+
+        .hero-subtitle { color: var(--text-muted); font-size: 1.15rem; line-height: 2; max-width: 550px; }
+        .typing-wrapper { display: inline-flex; align-items: center; gap: 5px; margin-bottom: 15px; }
+        .typing-text { color: var(--gold); font-weight: 700; font-size: 1.2rem; min-height: 1.5em; }
+        .typing-cursor {
+            display: inline-block; width: 2px; height: 1.3em; background: var(--gold);
+            animation: blink 0.8s infinite; vertical-align: middle;
+        }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+        .hero-img-container { position: relative; padding: 20px; }
+        .hero-img {
+            width: 100%; max-height: 550px; object-fit: cover; border-radius: 16px;
+            filter: drop-shadow(-10px 15px 30px rgba(0, 0, 0, 0.7)); transition: var(--transition);
+        }
+        .hero-img:hover { filter: drop-shadow(-10px 15px 40px rgba(212, 175, 55, 0.15)); transform: scale(1.02); }
+
+        /* ============================================
+           Buttons
+        ============================================ */
+        .btn-gold-primary, .btn-gold-outline, .btn-gold-sm, .btn-gold-glow {
+            font-family: 'Cairo', sans-serif; text-decoration: none; cursor: pointer;
+            display: inline-flex; align-items: center; gap: 8px; transition: var(--transition);
+            position: relative; overflow: hidden;
+        }
+        .btn-gold-primary {
+            background: linear-gradient(135deg, var(--gold), var(--gold-dim)); color: var(--black) !important;
+            font-weight: 700; padding: 14px 36px; border-radius: 8px; border: none; font-size: 0.95rem;
+        }
+        .btn-gold-primary:hover {
+            transform: translateY(-3px); box-shadow: 0 12px 30px var(--gold-glow);
+            background: linear-gradient(135deg, var(--gold-hover), var(--gold));
+        }
+        .btn-gold-outline {
+            border: 1.5px solid var(--gold); color: var(--gold) !important; font-weight: 700;
+            padding: 13px 36px; border-radius: 8px; background: transparent; font-size: 0.95rem;
+        }
+        .btn-gold-outline:hover {
+            background: var(--gold); color: var(--black) !important; transform: translateY(-3px); box-shadow: 0 12px 30px var(--gold-glow);
+        }
+        .btn-gold-sm { border: 1px solid var(--gold); color: var(--white) !important; padding: 11px 30px; border-radius: 8px; font-weight: 600; background: transparent; font-size: 0.9rem; }
+        .btn-gold-sm:hover { background: var(--gold); color: var(--black) !important; box-shadow: 0 8px 20px var(--gold-glow); transform: translateY(-2px); }
+        .btn-gold-glow { color: var(--gold) !important; border: 1px solid rgba(212, 175, 55, 0.3); background: rgba(212, 175, 55, 0.05); font-weight: 600; width: 100%; padding: 10px; border-radius: 8px; justify-content: center; }
+        .btn-gold-glow:hover { background: var(--gold) !important; color: var(--black) !important; box-shadow: 0 0 25px var(--gold-glow); transform: translateY(-2px); }
+        .hero-btns { display: flex; gap: 15px; flex-wrap: wrap; }
+
+        /* ============================================
+           About Section
+        ============================================ */
+        .about-section { background: linear-gradient(180deg, var(--black), var(--dark-gray)); }
+        .about-img-frame { position: relative; padding: 15px; border: 1px solid var(--gold-low); border-radius: 20px; background: rgba(255, 255, 255, 0.02); }
+        .about-img-frame::before { content: ''; position: absolute; top: -8px; left: -8px; width: 50px; height: 50px; border-top: 3px solid var(--gold); border-left: 3px solid var(--gold); border-radius: 12px 0 0 0; }
+        .about-img-frame::after { content: ''; position: absolute; bottom: -8px; right: -8px; width: 50px; height: 50px; border-bottom: 3px solid var(--gold); border-right: 3px solid var(--gold); border-radius: 0 0 12px 0; }
+        .about-img { border-radius: 15px; filter: grayscale(20%) brightness(0.9); transition: var(--transition); width: 100%; height: auto; object-fit: cover; }
+        .about-img:hover { filter: grayscale(0%) brightness(1); }
+        .experience-badge { position: absolute; bottom: -10px; right: -10px; background: var(--dark-gray); padding: 15px 22px; border: 2px solid var(--gold); border-radius: 12px; text-align: center; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); z-index: 2; }
+        .info-item { background: var(--card-bg) !important; border: 1px solid rgba(197, 160, 89, 0.15); border-radius: 12px; padding: 20px !important; transition: var(--transition); height: 100%; }
+        .info-item:hover { transform: translateY(-5px); border-color: var(--gold) !important; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); }
+        .vision-card { border-right: 3px solid var(--gold); background: rgba(212, 175, 55, 0.03); padding: 22px 25px; border-radius: 0 12px 12px 0; margin-bottom: 15px; transition: var(--transition); }
+        .vision-card:hover { background: rgba(212, 175, 55, 0.06); transform: translateX(-5px); }
+
+        /* ============================================
+           Features (Why Choose Us) Section
+        ============================================ */
+        .features-section { background: linear-gradient(180deg, var(--dark-gray), var(--black)); }
+        .feature-box { text-align: center; padding: 40px 20px; transition: var(--transition); border-radius: 16px; border: 1px solid transparent; }
+        .feature-box:hover { background: rgba(255, 255, 255, 0.02); border-color: rgba(212, 175, 55, 0.2); transform: translateY(-5px); }
+        .feature-icon-wrapper { width: 80px; height: 80px; margin: 0 auto 20px; background: rgba(212, 175, 55, 0.05); border-radius: 50%; display: flex; align-items: center; justify-content: center; position: relative; }
+        .feature-icon-wrapper::before { content: ''; position: absolute; inset: -5px; border: 1px dashed rgba(212, 175, 55, 0.3); border-radius: 50%; animation: spin 15s linear infinite; }
+        .feature-icon-wrapper i { font-size: 2rem; color: var(--gold); }
+        
+        /* ============================================
+           Services Section (With Shine Effect)
+        ============================================ */
+        .service-card {
+            background: var(--card-bg); border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: var(--border-radius); padding: 40px 30px; height: 100%;
+            transition: var(--transition); position: relative; overflow: hidden;
+            display: flex; flex-direction: column;
+        }
+        /* Shine Effect */
+        .service-card::after {
+            content: ''; position: absolute; top: 0; left: -100%; width: 50%; height: 100%;
+            background: linear-gradient(to right, transparent, rgba(212, 175, 55, 0.1), transparent);
+            transform: skewX(-20deg); transition: 0.7s; z-index: 1; pointer-events: none;
+        }
+        .service-card:hover::after { left: 150%; }
+
+        .service-card::before {
+            content: ''; position: absolute; top: 0; right: 0; width: 100%; height: 3px;
+            background: linear-gradient(90deg, var(--gold), transparent); opacity: 0; transition: var(--transition);
+        }
+        .service-card:hover { border-color: rgba(212, 175, 55, 0.3); transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); }
+        .service-card:hover::before { opacity: 1; }
+        .service-icon {
+            width: 70px; height: 70px; border-radius: 16px; background: rgba(212, 175, 55, 0.08);
+            display: flex; align-items: center; justify-content: center; margin-bottom: 25px; transition: var(--transition); position: relative; z-index: 2;
+        }
+        .service-card:hover .service-icon { background: rgba(212, 175, 55, 0.15); transform: scale(1.1); }
+        .service-icon i { font-size: 1.8rem; color: var(--gold); }
+        .service-card h3 { font-size: 1.3rem; margin-bottom: 15px; position: relative; z-index: 2; }
+        .service-card p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.9; position: relative; z-index: 2; }
+        .service-card .btn-gold-sm { position: relative; z-index: 2; }
+
+        /* ============================================
+           News Section
+        ============================================ */
+        .news-card {
+            background: var(--card-bg); border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: var(--border-radius); overflow: hidden; transition: var(--transition);
+            height: 100%; display: flex; flex-direction: column; position: relative;
+        }
+        /* Shine Effect for News */
+        .news-card::after {
+            content: ''; position: absolute; top: 0; left: -100%; width: 50%; height: 100%;
+            background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.05), transparent);
+            transform: skewX(-20deg); transition: 0.7s; z-index: 2; pointer-events: none;
+        }
+        .news-card:hover::after { left: 150%; }
+
+        .news-card:hover { border-color: rgba(212, 175, 55, 0.3); transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); }
+        .news-img-wrap { height: 220px; overflow: hidden; position: relative; }
+        .news-img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+        .news-card:hover .news-img-wrap img { transform: scale(1.1); }
+        .news-img-wrap::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 60px; background: linear-gradient(to top, var(--card-bg), transparent); }
+        .news-body { padding: 25px; flex: 1; display: flex; flex-direction: column; text-align: right; position: relative; z-index: 1;}
+        .news-badge { display: inline-flex; align-items: center; gap: 5px; padding: 4px 12px; border-radius: 6px; font-size: 0.8rem; font-weight: 600; margin-bottom: 15px; align-self: flex-start; }
+
+        /* ============================================
+           Stats Section
+        ============================================ */
+        .stats-section { background: linear-gradient(135deg, var(--black) 0%, #0d0d0d 50%, var(--black) 100%); position: relative; }
+        .stats-section::before { content: ''; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23D4AF37' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+        .stat-card { text-align: center; padding: 40px 20px; position: relative; }
+        .stat-card::after { content: ''; position: absolute; left: 0; top: 20%; height: 60%; width: 1px; background: linear-gradient(to bottom, transparent, rgba(212, 175, 55, 0.3), transparent); }
+        .stat-card:last-child::after { display: none; }
+        .stat-number { font-size: clamp(2.5rem, 5vw, 3.5rem); color: var(--gold); text-shadow: 0 0 30px rgba(212, 175, 55, 0.15); margin-bottom: 10px; }
+        .stat-label { font-weight: 600; font-size: 1.1rem; }
+
+        /* ============================================
+           Contact Section
+        ============================================ */
+        .contact-section { background: linear-gradient(180deg, var(--dark-gray), var(--black)); }
+        .contact-form-wrapper { background: var(--card-bg); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: var(--border-radius); padding: 40px; max-width: 700px; margin: 0 auto; position: relative;}
+        
+        .form-floating > .form-control {
+            background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px; color: var(--white); transition: var(--transition);
+        }
+        .form-floating > .form-control:focus {
+            border-color: var(--gold); box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+            background: rgba(212, 175, 55, 0.03);
+        }
+        /* Focus state accessibility */
+        .form-control:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+        
+        .form-floating > label { color: var(--text-muted); }
+        .form-floating > .form-control:focus ~ label, .form-floating > .form-control:not(:placeholder-shown) ~ label { color: var(--gold); opacity: 1; transform: scale(.85) translateY(-.5rem) translateX(.15rem); }
+        
+        /* Validation Classes */
+        .is-invalid { border-color: #dc3545 !important; background-image: none !important;}
+        .invalid-feedback { color: #dc3545; font-size: 0.85rem; margin-top: 5px; display: none; text-align: right;}
+        .is-invalid ~ .invalid-feedback { display: block; }
+
+        .contact-info-card { background: var(--card-bg); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 12px; padding: 25px; text-align: center; transition: var(--transition); height: 100%; }
+        .contact-info-card:hover { border-color: rgba(212, 175, 55, 0.3); transform: translateY(-5px); }
+        .contact-info-icon { width: 55px; height: 55px; border-radius: 12px; background: rgba(212, 175, 55, 0.08); display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; }
+
+        /* ============================================
+           Footer
+        ============================================ */
+        .footer { background: var(--black); border-top: 1px solid rgba(212, 175, 55, 0.1); }
+        .footer-brand { margin-bottom: 25px; }
+        .footer-links { display: flex; justify-content: center; gap: 25px; flex-wrap: wrap; margin-bottom: 25px; }
+        .footer-links a { color: var(--text-muted); text-decoration: none; font-size: 0.95rem; transition: var(--transition); position: relative;}
+        .footer-links a:hover { color: var(--gold); }
+        .social-links { display: flex; justify-content: center; gap: 15px; margin-bottom: 25px; }
+        .social-link { width: 45px; height: 45px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.1); display: flex; align-items: center; justify-content: center; color: var(--white); font-size: 1.1rem; transition: var(--transition); text-decoration: none; background: rgba(255, 255, 255, 0.02); }
+        .social-link:hover { background: var(--gold); color: var(--black); border-color: var(--gold); transform: translateY(-3px); box-shadow: 0 8px 20px var(--gold-glow); }
+        .footer-bottom { padding-top: 25px; border-top: 1px solid rgba(255, 255, 255, 0.05); }
+
+        /* ============================================
+           Scroll to Top
+        ============================================ */
+        .scroll-top-btn {
+            position: fixed; bottom: 30px; left: 30px; width: 48px; height: 48px; border-radius: 12px;
+            background: linear-gradient(135deg, var(--gold), var(--gold-dim)); color: var(--black); border: none;
+            display: flex; align-items: center; justify-content: center; font-size: 1.1rem; cursor: pointer; z-index: 9998;
+            opacity: 0; visibility: hidden; transform: translateY(20px); transition: var(--transition); box-shadow: 0 5px 20px var(--gold-glow);
+        }
+        .scroll-top-btn.visible { opacity: 1; visibility: visible; transform: translateY(0); }
+        .scroll-top-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 30px var(--gold-glow); }
+
+        /* ============================================
+           WhatsApp Float
+        ============================================ */
+        .whatsapp-float {
+            position: fixed; bottom: 30px; right: 30px; width: 55px; height: 55px; border-radius: 50%;
+            background: #25d366; color: white; display: flex; align-items: center; justify-content: center;
+            font-size: 1.6rem; z-index: 9998; text-decoration: none; box-shadow: 0 5px 25px rgba(37, 211, 102, 0.4);
+            transition: var(--transition); animation: whatsappPulse 2s infinite;
+        }
+        .whatsapp-float:hover { transform: scale(1.1); color: white; box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6); }
+        @keyframes whatsappPulse { 0%, 100% { box-shadow: 0 5px 25px rgba(37, 211, 102, 0.4); } 50% { box-shadow: 0 5px 35px rgba(37, 211, 102, 0.6); } }
+
+        /* ============================================
+           Responsive Adjustments
+        ============================================ */
+        @media (max-width: 991px) {
+            :root { --navbar-height: 65px; }
+            html { cursor: auto; /* استعادة الماوس العادي على الموبايل */ }
+            .cursor-dot, .cursor-outline { display: none !important; } /* إخفاء الكاستم ماوس */
+            
+            .navbar-collapse {
+                background: rgba(10, 10, 10, 0.98); padding: 20px; border-radius: 16px; margin-top: 15px;
+                border: 1px solid rgba(197, 160, 89, 0.15); backdrop-filter: blur(20px);
+                box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+            }
+            .navbar-nav { text-align: right; }
+            .nav-link::after { display: none; }
+            .hero { padding: 30px 0; }
+            .hero-frame { margin: 0 15px; }
+            .content-column { text-align: center !important; padding: 30px 20px !important; }
+            .content-column .hero-subtitle { margin: 0 auto; }
+            .hero-btns { justify-content: center; }
+            .img-column img { max-width: 85% !important; margin: 0 auto; }
+            .brand-name { font-size: 1.15rem !important; }
+            .experience-badge { right: 5px; bottom: 5px; padding: 10px 15px; }
+            .stat-card::after { display: none; }
+            .contact-form-wrapper { padding: 25px; }
+        }
+        @media (max-width: 768px) {
+            .hero-btns { flex-direction: column; }
+            .hero-btns a { width: 100%; justify-content: center; }
+            .section-padding { padding: 60px 0; }
+            .whatsapp-float { width: 48px; height: 48px; font-size: 1.3rem; bottom: 20px; right: 20px; }
+            .scroll-top-btn { bottom: 20px; left: 20px; width: 42px; height: 42px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Custom Cursor Elements -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader-content">
+            <div class="loader-circle"></div>
+            <h5 class="gold-text mt-3 brand-ruqaa fw-bold" style="font-size: 1.3rem;">الحسين دويدار</h5>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg" id="mainNavbar">
+        <div class="container">
+            <a class="navbar-brand brand-ruqaa" href="#home">
+                <i class="fa-solid fa-scale-balanced brand-icon"></i>
+                <span class="brand-name">المستشار <span class="gold-text">الحسين دويدار</span></span>
+            </a>
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="hamburger-icon"><span></span><span></span><span></span></div>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#home">الرئيسية</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">عن المستشار</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#features">لماذا نحن</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">التخصصات</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#news">الأرشيف</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">تواصل معنا</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 🏠 Hero -->
+    <header class="hero" id="home">
+        <div class="hero-bg-particles" id="particles"></div>
+        <div class="container">
+            <div class="hero-frame" data-aos="zoom-in" data-aos-duration="1200">
+                <div class="row align-items-center g-0">
+                    <div class="col-lg-7 p-4 p-lg-5 text-center text-lg-start content-column">
+                        <span class="official-tag mb-3" data-aos="fade-down" data-aos-delay="300">
+                            <i class="fas fa-certificate"></i>
+                            الموقع الرسمي لمكتب المستشار
+                        </span>
+                        <h1 class="hero-name brand-ruqaa" data-aos="fade-up" data-aos-delay="400">الحسين دويدار</h1>
+                        <div class="typing-wrapper" data-aos="fade-up" data-aos-delay="500">
+                            <span class="typing-text" id="typingText"></span>
+                            <span class="typing-cursor"></span>
+                        </div>
+                        <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="600">
+                            من أجل عدالة ناجزة، وصوت يعلو بالحق داخل أروقة المحاكم. نحن هنا لنحوّل تطلعاتكم إلى واقع ملموس عبر عمل قانوني واحترافي مُخلص، ورؤية قانونية ثاقبة.
+                        </p>
+                        <div class="hero-btns mt-4" data-aos="fade-up" data-aos-delay="700">
+                            <a href="#contact" class="btn-gold-primary">
+                                <i class="fas fa-phone-volume"></i> احجز استشارتك الآن
+                            </a>
+                            <a href="#about" class="btn-gold-outline">
+                                <i class="fas fa-user-tie"></i> السيرة الذاتية
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 text-center img-column">
+                        <div class="hero-img-container">
+                            <!-- صورة افتراضية فخمة تمثل المحاماة - يمكنك استبدال الرابط بصورتك الشخصية لاحقاً -->
+                            <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80&w=800&h=1000" alt="المستشار الحسين دويدار" class="img-fluid hero-img" loading="eager">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 1️⃣ عن المستشار -->
+    <section class="about-section section-padding" id="about">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-5" data-aos="fade-left">
+                    <div class="about-img-frame position-relative">
+                        <img src="https://images.unsplash.com/photo-1505664177922-9818f15aa25b?auto=format&fit=crop&q=80&w=800" alt="عن المستشار" class="about-img shadow-lg" loading="lazy">
+                        <div class="experience-badge">
+                            <span class="gold-text fw-bold brand-ruqaa fs-5">صوت الحق</span>
+                            <p class="text-white mb-0 small">بكم ومعكم نستمر</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 text-end" data-aos="fade-right">
+                    <h6 class="gold-text mb-2 fw-bold">عن المستشار</h6>
+                    <h2 class="brand-ruqaa text-white mb-4" style="font-size: clamp(1.8rem, 4vw, 2.5rem);">مسيرة من العطاء والخبرة القانونية</h2>
+                    <p class="text-secondary mb-4 fs-5" style="line-height: 2;">يؤمن المستشار الحسين دويدار بأن المحامي هو وكيل عن الحق، يسعى بكل ما أوتي من قوة لرد المظالم والدفاع عن حقوق الموكلين وإرساء مبادئ العدالة في المجتمع، والارتقاء بالخدمات القانونية لأعلى المستويات.</p>
+                    <div class="row g-3 mb-4">
+                        <div class="col-md-6">
+                            <div class="info-item d-flex align-items-center">
+                                <i class="fas fa-graduation-cap gold-text fa-2x ms-3"></i>
+                                <div>
+                                    <h6 class="text-white mb-1 fw-bold">المؤهل الأكاديمي</h6>
+                                    <p class="text-secondary small mb-0">ليسانس حقوق، وماجستير في القانون العام</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="info-item d-flex align-items-center">
+                                <i class="fas fa-gavel gold-text fa-2x ms-3"></i>
+                                <div>
+                                    <h6 class="text-white mb-1 fw-bold">الدور المهني</h6>
+                                    <p class="text-secondary small mb-0">محامي بالنقض والإدارية العليا</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vision-card">
+                        <h5 class="gold-text mb-2 brand-ruqaa"><i class="fas fa-star ms-2"></i> رسالتنا</h5>
+                        <p class="text-secondary small mb-0">الشفافية التامة في عرض قضاياكم، والعمل بجدية وحزم على إنهاء كافة المعوقات القانونية التي تواجهكم بمهنية وسرية تامة.</p>
+                    </div>
+                    <div class="vision-card">
+                        <h5 class="gold-text mb-2 brand-ruqaa"><i class="fas fa-bullseye ms-2"></i> أهدافنا</h5>
+                        <p class="text-secondary small mb-0">تطوير منظومة الدفاع، دعم الكيانات التجارية والشركات، وحماية حقوق الأفراد والأسرة من خلال تقديم استشارات قانونية استباقية وفعالة.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2️⃣ لماذا تختارنا (قسم جديد تمت إضافته) -->
+    <section class="features-section section-padding" id="features">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h6 class="gold-text fw-bold mb-2">مميزاتنا</h6>
+                <h2 class="gold-text brand-ruqaa">لماذا تختار مكتب المستشار الحسين دويدار؟</h2>
+                <p>نلتزم بتقديم أرقى معايير الجودة والمهنية لضمان حقوق عملائنا</p>
+                <div class="header-line"></div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+                    <div class="feature-box">
+                        <div class="feature-icon-wrapper">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4 class="text-white brand-ruqaa mb-3">سرية وموثوقية تامة</h4>
+                        <p class="text-secondary small">نضع سرية معلومات عملائنا وخصوصية قضاياهم في قمة أولوياتنا، مما يضمن لك بيئة آمنة للتباحث القانوني.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-box">
+                        <div class="feature-icon-wrapper">
+                            <i class="fas fa-chess-knight"></i>
+                        </div>
+                        <h4 class="text-white brand-ruqaa mb-3">استراتيجيات مبتكرة</h4>
+                        <p class="text-secondary small">لا نعتمد على الحلول التقليدية فقط، بل ندرس كل قضية من كافة الجوانب لابتكار خطط دفاعية وهجومية حاسمة.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-box">
+                        <div class="feature-icon-wrapper">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h4 class="text-white brand-ruqaa mb-3">شراكة قانونية مستدامة</h4>
+                        <p class="text-secondary small">نحن لا نمثلك في قضية واحدة فحسب، بل نهدف لنكون المستشار القانوني الدائم لحمايتك أنت وأعمالك مستقبلاً.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3️⃣ التخصصات -->
+    <section class="section-padding bg-darker" id="services">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h6 class="gold-text fw-bold mb-2">ما نقدمه</h6>
+                <h2 class="gold-text brand-ruqaa">الخدمات والتخصصات القانونية</h2>
+                <p>خدمات قانونية شاملة بأعلى معايير الاحترافية والمهنية</p>
+                <div class="header-line"></div>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-balance-scale"></i></div>
+                        <h3 class="text-white brand-ruqaa">القضايا المدنية والجنائية</h3>
+                        <p>تمثيل قانوني قوي ودفاع متخصص في كافة الجنايات والجنح والنزاعات المدنية لضمان حقوقك أمام كافة درجات التقاضي بدقة واحتراف.</p>
+                        <a href="#contact" class="btn-gold-sm mt-auto w-100 justify-content-center">تواصل معنا <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-file-contract"></i></div>
+                        <h3 class="text-white brand-ruqaa">استشارات وتأسيس الشركات</h3>
+                        <p>نقدم استشارات قانونية متكاملة للشركات، بالإضافة إلى صياغة العقود التجارية وتأسيس الكيانات القانونية وحماية الملكية الفكرية باحترافية.</p>
+                        <a href="#contact" class="btn-gold-sm mt-auto w-100 justify-content-center">طلب استشارة <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-users"></i></div>
+                        <h3 class="text-white brand-ruqaa">قضايا الأحوال الشخصية</h3>
+                        <p>تمثيل متخصص وداعم في قضايا الطلاق والنفقة والحضانة والمواريث، مع مراعاة قصوى لخصوصية وسرية جميع القضايا الأسرية الحساسة.</p>
+                        <a href="#contact" class="btn-gold-sm mt-auto w-100 justify-content-center">احجز موعد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4️⃣ الأرشيف -->
+    <section class="section-padding bg-darker" id="news">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h6 class="gold-text fw-bold mb-2">أحدث الأخبار</h6>
+                <h2 class="gold-text brand-ruqaa">النشاط القانوني</h2>
+                <p>أحدث الأخبار والإعلانات الخاصة بمكتب المستشار</p>
+                <div class="header-line"></div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
+                    <div class="news-card">
+                        <div class="news-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1505664177922-9818f15aa25b?auto=format&fit=crop&q=80&w=600" alt="مؤتمر العدالة" loading="lazy">
+                        </div>
+                        <div class="news-body">
+                            <span class="news-badge" style="background: rgba(255, 193, 7, 0.15); color: #ffc107;">خبر سار ⚖️</span>
+                            <h5 class="gold-text brand-ruqaa mb-3">مشاركة المستشار الحسين دويدار في مؤتمر العدالة</h5>
+                            <p class="text-white small mb-4" style="opacity: 0.85;">تتشرف إدارة المكتب بالإعلان عن مشاركة سيادة المستشار الحسين دويدار في الجلسة الافتتاحية لمؤتمر العدالة وتكثيف سبل حماية الاستثمار...</p>
+                            <button class="btn btn-gold-glow mt-auto">تفاصيل الخبر <i class="fas fa-arrow-left"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="news-card">
+                        <div class="news-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&q=80&w=600" alt="التحكيم التجاري" loading="lazy">
+                        </div>
+                        <div class="news-body">
+                            <span class="news-badge" style="background: rgba(13, 202, 240, 0.15); color: #0dcaf0;">إعلان ⚖️</span>
+                            <h5 class="gold-text brand-ruqaa mb-3">تهنئة باجتياز دورة التحكيم التجاري</h5>
+                            <p class="text-white small mb-4" style="opacity: 0.85;">في إطار الشفافية وتكافؤ الفرص، يهنئ مكتب المستشار السادة المحامين المتدربين على اجتيازهم دورة التحكيم التجاري المتقدمة...</p>
+                            <button class="btn btn-gold-glow mt-auto">تفاصيل الخبر <i class="fas fa-arrow-left"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="news-card">
+                        <div class="news-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1521791055366-0d553872125f?auto=format&fit=crop&q=80&w=600" alt="تدريب الخريجين" loading="lazy">
+                        </div>
+                        <div class="news-body">
+                            <span class="news-badge" style="background: rgba(25, 135, 84, 0.15); color: #198754;">فرصة تدريب ⚖️</span>
+                            <h5 class="gold-text brand-ruqaa mb-3">فتح باب التقديم للتدريب الصيفي للخريجين</h5>
+                            <p class="text-white small mb-4" style="opacity: 0.85;">يعلن مكتب المستشار / الحسين دويدار عن فتح باب التقدم لبرنامج التدريب القانوني العملي للخريجين الجدد، لتأهيلهم لسوق العمل...</p>
+                            <button class="btn btn-gold-glow mt-auto">تفاصيل الخبر <i class="fas fa-arrow-left"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5️⃣ الإحصائيات -->
+    <section class="stats-section section-padding" id="stats">
+        <div class="container position-relative">
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="stat-card">
+                        <h2 class="stat-number brand-ruqaa" data-target="2000">0</h2>
+                        <p class="stat-label text-white">استشارة وقضية ناجحة</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-card">
+                        <h2 class="stat-number brand-ruqaa" data-target="25">0</h2>
+                        <p class="stat-label text-white">سنوات من الخبرة</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-card">
+                        <h2 class="stat-number brand-ruqaa" data-target="100">0</h2>
+                        <p class="stat-label text-white">سرية واحترافية</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6️⃣ التواصل -->
+    <section class="contact-section section-padding" id="contact">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h6 class="gold-text fw-bold mb-2">نسعد بتواصلكم</h6>
+                <h2 class="gold-text brand-ruqaa">تواصل معنا</h2>
+                <p>للاستفسارات والاستشارات القانونية، لا تتردد في التواصل مع مكتب المستشار</p>
+                <div class="header-line"></div>
+            </div>
+            <div class="row g-4 mb-5 justify-content-center">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <div class="contact-info-card">
+                        <div class="contact-info-icon"><i class="fas fa-phone gold-text fa-lg"></i></div>
+                        <h6 class="text-white fw-bold mb-2">اتصل بنا</h6>
+                        <!-- قم بتغيير رقم الهاتف هنا -->
+                        <p class="text-secondary small mb-0" dir="ltr">+20 100 000 0000</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="contact-info-card">
+                        <div class="contact-info-icon"><i class="fas fa-envelope gold-text fa-lg"></i></div>
+                        <h6 class="text-white fw-bold mb-2">البريد الإلكتروني</h6>
+                        <p class="text-secondary small mb-0">info@dowedar-law.com</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="contact-info-card">
+                        <div class="contact-info-icon"><i class="fas fa-map-marker-alt gold-text fa-lg"></i></div>
+                        <h6 class="text-white fw-bold mb-2">العنوان</h6>
+                        <p class="text-secondary small mb-0">القاهرة، مصر</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form-wrapper" data-aos="fade-up" data-aos-delay="100">
+                <form id="contactForm" novalidate>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="name" placeholder="الاسم بالكامل" required>
+                                <label for="name"><i class="fas fa-user ms-2 gold-text"></i> الاسم بالكامل</label>
+                                <div class="invalid-feedback">برجاء إدخال الاسم بالكامل</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="tel" class="form-control" id="phone" placeholder="رقم الهاتف" pattern="^01[0125][0-9]{8}$" required>
+                                <label for="phone"><i class="fas fa-phone ms-2 gold-text"></i> رقم الهاتف (11 رقم)</label>
+                                <div class="invalid-feedback">برجاء إدخال رقم هاتف مصري صحيح يبدأ بـ 01</div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <input type="email" class="form-control" id="email" placeholder="البريد الإلكتروني">
+                                <label for="email"><i class="fas fa-envelope ms-2 gold-text"></i> البريد الإلكتروني (اختياري)</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <textarea class="form-control" id="message" placeholder="اكتب رسالتك" style="height: 150px" required></textarea>
+                                <label for="message"><i class="fas fa-comment-dots ms-2 gold-text"></i> تفاصيل الاستشارة</label>
+                                <div class="invalid-feedback">برجاء كتابة تفاصيل رسالتك أو استفسارك</div>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-4">
+                            <button type="submit" class="btn-gold-primary w-100 justify-content-center" style="padding: 16px; font-size: 1.05rem;">
+                                <i class="fas fa-paper-plane"></i> إرسال الطلب عبر واتساب
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-5">
+        <div class="container text-center">
+            <div class="footer-brand">
+                <i class="fa-solid fa-scale-balanced fa-2x gold-text mb-3" style="display: block;"></i>
+                <h4 class="gold-text brand-ruqaa mb-0">مكتب المستشار الحسين دويدار</h4>
+            </div>
+            <div class="footer-links">
+                <a href="#home">الرئيسية</a>
+                <a href="#about">عن المستشار</a>
+                <a href="#features">لماذا نحن</a>
+                <a href="#services">تخصصاتنا</a>
+                <a href="#news">الأرشيف</a>
+                <a href="#contact">تواصل معنا</a>
+            </div>
+            <div class="social-links">
+                <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <!-- استبدل الرقم برقم الواتساب الخاص بك -->
+                <a href="https://wa.me/201000000000" class="social-link" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+            </div>
+            <div class="footer-bottom">
+                <p class="mb-0 text-secondary small">جميع الحقوق محفوظة لمكتب المستشار الحسين دويدار © 2026 | تصميم وتطوير باحترافية</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-top-btn" id="scrollTopBtn" aria-label="العودة للأعلى">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- WhatsApp Float (قم بتحديث الرقم هنا أيضاً) -->
+    <a href="https://wa.me/201000000000" target="_blank" class="whatsapp-float" aria-label="تواصل عبر واتساب">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        // ========================================
+        // ⚙️ إعدادات ثابتة
+        // ========================================
+        const NAVBAR_HEIGHT = document.getElementById('mainNavbar').offsetHeight;
+
+        // ========================================
+        // Custom Cursor Logic
+        // ========================================
+        const cursorDot = document.querySelector('.cursor-dot');
+        const cursorOutline = document.querySelector('.cursor-outline');
+
+        window.addEventListener('mousemove', function (e) {
+            const posX = e.clientX;
+            const posY = e.clientY;
+
+            cursorDot.style.left = `${posX}px`;
+            cursorDot.style.top = `${posY}px`;
+
+            // Adding slight delay to outline for smooth effect
+            cursorOutline.animate({
+                left: `${posX}px`,
+                top: `${posY}px`
+            }, { duration: 150, fill: "forwards" });
+        });
+
+        // Add hover effect on all clickable elements
+        const clickables = document.querySelectorAll('a, button, input, textarea, .service-card, .news-card, .feature-box');
+        clickables.forEach(el => {
+            el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+            el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+        });
+
+        // ========================================
+        // Scroll Progress Bar
+        // ========================================
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById("scrollProgress").style.width = scrolled + "%";
+        });
+
+        // ========================================
+        // Preloader
+        // ========================================
+        window.addEventListener('load', () => {
+            const preloader = document.getElementById('preloader');
+            if (preloader) {
+                setTimeout(() => {
+                    preloader.classList.add('hidden');
+                    setTimeout(() => preloader.remove(), 600);
+                }, 800);
+            }
+            AOS.init({ duration: 900, once: true, easing: 'ease-out-cubic', offset: 50 });
+        });
+
+        // ========================================
+        // Particles
+        // ========================================
+        (function() {
+            const container = document.getElementById('particles');
+            if (!container) return;
+            const count = window.innerWidth < 768 ? 15 : 30;
+            for (let i = 0; i < count; i++) {
+                const p = document.createElement('div');
+                p.className = 'particle';
+                p.style.left = Math.random() * 100 + '%';
+                p.style.animationDelay = Math.random() * 8 + 's';
+                p.style.animationDuration = (6 + Math.random() * 6) + 's';
+                p.style.width = p.style.height = (2 + Math.random() * 3) + 'px';
+                container.appendChild(p);
+            }
+        })();
+
+        // ========================================
+        // Navbar Scroll Effect & Outside Click Close
+        // ========================================
+        const navbar = document.getElementById('mainNavbar');
+        const toggler = document.querySelector('.navbar-toggler');
+        const collapseMenu = document.getElementById('navbarNav');
+
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        }, { passive: true });
+
+        // إغلاق القائمة عند الضغط خارجها
+        document.addEventListener('click', function(event) {
+            const isClickInside = navbar.contains(event.target);
+            if (!isClickInside && collapseMenu.classList.contains('show')) {
+                toggler.click();
+            }
+        });
+
+        // ========================================
+        // Smooth Scroll & Close Menu
+        // ========================================
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href').substring(1);
+                if (!targetId) return;
+                
+                // Allow default behavior for social links with '#'
+                if(this.classList.contains('social-link')) return;
+
+                e.preventDefault();
+                const target = document.getElementById(targetId);
+                if (!target) return;
+
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+                if (toggler && !toggler.classList.contains('collapsed')) {
+                    toggler.click();
+                }
+            });
+        });
+
+        // ========================================
+        // Scroll Spy
+        // ========================================
+        const navbarLinks = document.querySelectorAll('.navbar .nav-link');
+        const allSections = document.querySelectorAll('header[id], section[id]');
+        const navSectionIds = Array.from(navbarLinks).map(link => link.getAttribute('href').substring(1));
+
+        function updateActiveLink() {
+            const scrollPos = window.scrollY;
+            const windowHeight = window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight;
+
+            if (scrollPos + windowHeight >= documentHeight - 50) {
+                navbarLinks.forEach(link => link.classList.remove('active'));
+                if(navbarLinks.length > 0) navbarLinks[navbarLinks.length - 1].classList.add('active');
+                return;
+            }
+
+            let currentSection = '';
+            for (let i = allSections.length - 1; i >= 0; i--) {
+                const section = allSections[i];
+                const sectionId = section.getAttribute('id');
+                if (!navSectionIds.includes(sectionId)) continue;
+
+                const rect = section.getBoundingClientRect();
+                if (rect.top <= NAVBAR_HEIGHT + 100) {
+                    currentSection = sectionId;
+                    break;
+                }
+            }
+
+            if (!currentSection) currentSection = 'home';
+
+            navbarLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + currentSection) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateActiveLink, { passive: true });
+        updateActiveLink();
+
+        // ========================================
+        // Counter Animation
+        // ========================================
+        function animateCounters() {
+            document.querySelectorAll('.stat-number').forEach(counter => {
+                if (counter.dataset.animated) return;
+                const target = parseInt(counter.dataset.target);
+                const duration = 2000;
+                const step = target / (duration / 16);
+                let current = 0;
+
+                const update = () => {
+                    current += step;
+                    if (current < target) {
+                        counter.textContent = Math.floor(current) + '+';
+                        requestAnimationFrame(update);
+                    } else {
+                        counter.textContent = target === 100 ? target + '%' : '+' + target;
+                        counter.dataset.animated = 'true';
+                    }
+                };
+                requestAnimationFrame(update);
+            });
+        }
+
+        const statsEl = document.getElementById('stats');
+        if (statsEl) {
+            new IntersectionObserver((entries, obs) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounters();
+                        obs.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.3 }).observe(statsEl);
+        }
+
+        // ========================================
+        // Typing Effect
+        // ========================================
+        (function() {
+            const texts = [
+                'مستشار قانوني ومحامي بالنقض',
+                'خبرة قانونية استثنائية',
+                'دقة في صياغة العقود وتأسيس الشركات',
+                'حماية حقوقك هي غايتنا الأولى'
+            ];
+            const el = document.getElementById('typingText');
+            if (!el) return;
+
+            let textIdx = 0, charIdx = 0, deleting = false;
+
+            function type() {
+                const txt = texts[textIdx];
+                el.textContent = txt.substring(0, deleting ? --charIdx : ++charIdx);
+                let speed = deleting ? 30 : 80;
+
+                if (!deleting && charIdx === txt.length) {
+                    speed = 2000; deleting = true;
+                } else if (deleting && charIdx === 0) {
+                    deleting = false;
+                    textIdx = (textIdx + 1) % texts.length;
+                    speed = 300;
+                }
+                setTimeout(type, speed);
+            }
+            setTimeout(type, 1500);
+        })();
+
+        // ========================================
+        // Scroll to Top
+        // ========================================
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+        window.addEventListener('scroll', () => {
+            scrollTopBtn.classList.toggle('visible', window.scrollY > 400);
+        }, { passive: true });
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // ========================================
+        // Form Validation & WhatsApp Logic
+        // ========================================
+        const contactForm = document.getElementById('contactForm');
+        // قم بوضع رقم الواتساب الفعلي هنا (بدون أصفار في البداية ومع كود الدولة)
+        const WHATSAPP_NUMBER = "201000000000"; 
+
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                // Check standard HTML5 validation
+                if (!this.checkValidity()) {
+                    this.classList.add('was-validated');
+                    
+                    // Extra logic to visually highlight inputs
+                    const inputs = this.querySelectorAll('input[required], textarea[required]');
+                    inputs.forEach(input => {
+                        if(!input.checkValidity()) {
+                            input.classList.add('is-invalid');
+                        } else {
+                            input.classList.remove('is-invalid');
+                        }
+                    });
+                    
+                    // Reset invalid class when user starts typing
+                    inputs.forEach(input => {
+                        input.addEventListener('input', function() {
+                           if(this.checkValidity()){
+                               this.classList.remove('is-invalid');
+                           } 
+                        });
+                    });
+                    
+                    return; // Stop here if form is invalid
+                }
+
+                // If valid, format message and send
+                const name = document.getElementById('name').value;
+                const phone = document.getElementById('phone').value;
+                const email = document.getElementById('email').value;
+                const message = document.getElementById('message').value;
+
+                let msg = `مرحباً معالي المستشار الحسين دويدار، أنا ${name}%0Aرقم الهاتف: ${phone}%0A`;
+                if (email) msg += `البريد الإلكتروني: ${email}%0A`;
+                msg += `%0Aتفاصيل الاستشارة:%0A${message}`;
+
+                // فتح واتساب
+                window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`, '_blank');
+                
+                // إعادة ضبط الفورم
+                this.reset();
+                this.classList.remove('was-validated');
+                const inputs = this.querySelectorAll('.is-invalid');
+                inputs.forEach(i => i.classList.remove('is-invalid'));
+            });
+        }
+    </script>
+</body>
+</html>
